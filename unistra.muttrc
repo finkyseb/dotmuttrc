@@ -3,17 +3,21 @@
 ## General configuration.
 set my_server       = "mailserver.u-strasbg.fr"
 set my_user         = "virgile.gerecke" 
-set my_pass         = "`security find-generic-password -a mutt-unistra -w`" 
+set my_pass         = "`security find-generic-password -a virgile.gerecke -w`" 
 
 ## IMAP configuration.
 set from            = "$my_user@unistra.fr"
 set folder          = "imaps://$my_user@$my_server"
-set imap_user       = $my_user
-set imap_pass       = $my_pass
-set spoolfile       = +INBOX
+#set imap_user       = $my_user
+#set imap_pass       = $my_pass
+account-hook mailserver.u-strasbg.fr  "set imap_user='$my_user'"
+account-hook mailserver.u-strasbg.fr  "set imap_pass='$my_pass'"
+
+set spoolfile       = "+INBOX"
 set postponed       = "=INBOX.Brouillons"
 set mbox            = "=INBOX.Archives"
 set record          = "=INBOX.Envoyes"
+#set trash           = "=INBOX.Corbeille"
 
 # Check all folders.
 set imap_check_subscribed

@@ -1,0 +1,39 @@
+## General configuration.
+set my_server       = "www.andrealphus.com"
+set my_user         = "virgile@gerecke.fr" 
+set my_pass         = "`security find-generic-password -a mutt-andrealphus -w`" 
+set my_smtp_user    = "virgile.gerecke"
+set my_smtp_server  = "mailserver.u-strasbg.fr"
+set my_smtp_pass    = "`security find-generic-password -a virgile.gerecke -w`"
+
+## IMAP configuration.
+set from            = "$my_user"
+set folder          = "imaps://$my_user@$my_server"
+#set imap_user       = $my_user
+#set imap_pass       = $my_pass
+account-hook www.andrealphus.com  "set imap_user='$my_user'"
+account-hook www.andrealphus.com  "set imap_pass='$my_pass'"
+
+set spoolfile       = +INBOX
+set postponed       = "=Drafts"
+set mbox            = "=Archives"
+set record          = "=Sent Messages"
+#set trash           = "=INBOX.Corbeille"
+
+# Check all folders.
+set imap_check_subscribed
+
+# Store message headers locally to speed things up.
+set header_cache = ~/.cache/mutt
+
+# Allow mutt to open new imap connection automatically.
+unset imap_passive
+
+# How often to check for new mail
+set mail_check = 60
+set timeout = 15
+
+## SMTP configuration.
+set my_name         = "Virgile Gerecke"
+set smtp_url        = "smtps://$my_smtp_user:$my_smtp_pass@$my_smtp_server"
+set ssl_force_tls   = yes

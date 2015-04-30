@@ -20,15 +20,15 @@ macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting 
 
 ### Multi malibox configuration
 ## Personal account.
-#source ~/.mutt/gmail.muttrc
-#folder-hook $folder 'source ~/.mutt/gmail.muttrc'
+#source ~/.mutt/andrealphus.muttrc
+folder-hook 'www.andrealphus.com' 'source ~/.mutt/andrealphus.muttrc'
 #
 ## Work account.
 source ~/.mutt/unistra.muttrc
-folder-hook $folder 'source ~/.mutt/unistra.muttrc'
+folder-hook 'mailserver.u-strasbg.fr' 'source ~/.mutt/unistra.muttrc'
 #
-#macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.mutt/gmail.muttrc<enter><change-folder>!<enter>'
-macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.mutt/unistra.muttrc<enter><change-folder>!<enter>'
+macro index,pager <F2> '<enter-command>source ~/.mutt/andrealphus.muttrc<enter><change-folder>!<enter>'
+macro index,pager <F3> '<enter-command>source ~/.mutt/unistra.muttrc<enter><change-folder>!<enter>'
 
 source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 
