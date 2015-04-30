@@ -18,22 +18,6 @@ bind pager <Down> next-line
 macro index "xd" "<enter-command>set sort=reverse-last-date-received<enter>" "No thread view, sorting by reverse date"
 macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting by reverse date"
 
-# Colors for white background.
-#color    hdrdefault    black           default
-#color    quoted        red             default
-#color    signature     brightblack     default
-#color    indicator     brightwhite     red
-#color    attachment    black           default
-#color    error         red             default
-#color    message       black            default
-#color    search        brightwhite     magenta
-#color    status        black           white
-#color    tree          red             default
-#color    normal        black           default
-#color    tilde         green           default
-#color    bold          brightyellow    default
-#color    markers       red             default
-
 ### Multi malibox configuration
 ## Personal account.
 #source ~/.mutt/gmail.muttrc
