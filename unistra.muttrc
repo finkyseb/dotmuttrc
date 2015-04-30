@@ -1,9 +1,9 @@
-source "gpg -d ~/.mutt/unistra.password.gpg |"
+#source "gpg -d ~/.mutt/unistra.password.gpg |"
 
 ## General configuration.
 set my_server       = "mailserver.u-strasbg.fr"
-#set my_user         = "$unistra_user" 
-#set my_pass         = "$unistra_pass"
+set my_user         = "virgile.gerecke" 
+set my_pass         = "`security find-generic-password -a mutt-unistra -w`" 
 
 ## IMAP configuration.
 set from            = "$my_user@unistra.fr"
