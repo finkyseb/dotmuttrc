@@ -34,3 +34,6 @@ source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 
 set date_format="%d/%m/%Y - %H:%M:%S"
 set index_format        = "[%Z]  %D  %-20.20F  %s"
+
+auto_view text/html
+alternative_order text/calendar text/plain text/enriched text/html
