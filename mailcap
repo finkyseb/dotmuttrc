@@ -1,8 +1,6 @@
-#text/html;                      /Applications/Firefox.app/Contents/MacOS/firefox %s; nametemplate=%s.html
-text/html;                      elinks %s; nametemplate=%s.html
-text/html;                      elinks -dump %s; nametemplate=%s.html; copiousoutput
-
-
+text/html;                    ~/.mutt/view_attachment.sh %s html 
+#text/html;                      elinks %s; nametemplate=%s.html
+#text/html;                      elinks -dump %s; nametemplate=%s.html; copiousoutput
 
 # Images
 image/jpeg; ~/.mutt/view_attachment.sh %s
@@ -12,3 +10,6 @@ image/gif; ~/.mutt/view_attachment.sh %s
 
 # PDF
 application/pdf; ~/.mutt/view_attachment.sh %s pdf
+
+# Unidentified.
+application/octet-stream; ~/.mutt/view_attachment.sh %s "-" 
