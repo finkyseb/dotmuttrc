@@ -37,3 +37,9 @@ set timeout = 15
 set my_name         = "Virgile Gerecke"
 set smtp_url        = "smtps://$my_smtp_user:$my_smtp_pass@$my_smtp_server"
 set ssl_force_tls   = yes
+
+## Call for Mac address book
+set query_command = "~/.mutt/andrealphus_query_command.sh '%s'"
+
+## Aliases
+source ~/.mutt/andrealphus.aliases
