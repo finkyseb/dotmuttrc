@@ -38,3 +38,5 @@ set smtp_url        = "smtps://$my_user:$my_pass@$my_server"
 set ssl_force_tls   = yes
 
 source ~/.mutt/smime.rc
+
+set query_command = "~/.mutt/unistra_query_command.sh '%s'"
