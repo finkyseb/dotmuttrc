@@ -12,6 +12,7 @@ image/tiff; ~/.mutt/view_attachment.sh %s gif
 
 # PDF
 application/pdf; ~/.mutt/view_attachment.sh %s pdf
+application/x-latex; ~/.mutt/view_attachment.sh %s pdf
 
 # Unidentified.
 application/octet-stream; ~/.mutt/view_attachment.sh %s "-" 
