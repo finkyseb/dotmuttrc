@@ -13,7 +13,7 @@ unset smime_ask_cert_label
 set smime_timeout=300
 
 # Global crypto options -- these affect PGP operations as well.
-set crypt_autosign = yes
+set crypt_autosign = no
 set crypt_replyencrypt = yes
 set crypt_replysign = yes
 set crypt_replysignencrypted = yes
@@ -23,7 +23,7 @@ set crypt_verify_sig = yes
 
 # The (default) keyfile for signing/decrypting.  Uncomment the following
 # line and replace the keyid with your own.
-set smime_default_key="235fbb23.0"
+set smime_default_key="fbc6a900.0"
 
 # Uncommen to make mutt ask what key to use when trying to decrypt a message.
 # It will use the default key above (if that was set) else.
