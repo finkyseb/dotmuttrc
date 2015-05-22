@@ -43,3 +43,5 @@ alternative_order text/calendar text/plain text/enriched text/html
 #set smime_keys="~/.smime/keys"
 #set smime_certificates="~/.smime/certificates"
 #set smime_ca_location="~/.smime/certificates"
+
+set editor = "vim -c 'set tw=72' -c 'set wrap'"
