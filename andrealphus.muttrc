@@ -1,10 +1,10 @@
 ## General configuration.
 set my_server       = "www.andrealphus.com"
-set my_user         = "virgile@gerecke.fr" 
+set my_user         = "sebastien@finkbeiner.fr" 
 set my_pass         = "`security find-generic-password -a mutt-andrealphus -w`" 
-set my_smtp_user    = "virgile.gerecke"
+set my_smtp_user    = "s.finkbeiner"
 set my_smtp_server  = "mailserver.u-strasbg.fr"
-set my_smtp_pass    = "`security find-generic-password -a virgile.gerecke -w`"
+set my_smtp_pass    = "`security find-generic-password -a s.finkbeiner -w`"
 
 ## IMAP configuration.
 set from            = "$my_user"
@@ -34,7 +34,7 @@ set mail_check = 60
 set timeout = 15
 
 ## SMTP configuration.
-set my_name         = "Virgile Gerecke"
+set my_name         = "Sébastien FINKBEINER"
 set smtp_url        = "smtps://$my_smtp_user:$my_smtp_pass@$my_smtp_server"
 set ssl_force_tls   = yes
 
