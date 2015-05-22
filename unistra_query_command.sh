@@ -6,7 +6,7 @@
 max=100
 timeout=60
 sort=givenName
-username='virgile.gerecke'
+username='s.finkbeiner'
 uid=`echo "uid=$username,o=uds"`
 password=`security find-generic-password -a "$username" -w`
 base='o=uds'
