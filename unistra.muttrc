@@ -2,8 +2,8 @@
 
 ## General configuration.
 set my_server       = "mailserver.u-strasbg.fr"
-set my_user         = "virgile.gerecke" 
-set my_pass         = "`security find-generic-password -a virgile.gerecke -w`" 
+set my_user         = "s.finkbeiner" 
+set my_pass         = "`security find-generic-password -a s.finkbeiner -w`" 
 
 ## IMAP configuration.
 set from            = "$my_user@unistra.fr"
@@ -33,7 +33,7 @@ set mail_check = 60
 set timeout = 15
 
 ## SMTP configuration.
-set my_name         = "Virgile Gerecke"
+set my_name         = "Sébastien FINKBEINER"
 set smtp_url        = "smtps://$my_user:$my_pass@$my_server"
 set ssl_force_tls   = yes
 
