@@ -44,3 +44,6 @@ set query_command = "~/.mutt/unistra_query_command.sh '%s'"
 
 ## Aliases
 source ~/.mutt/unistra.aliases
+
+# Not much
+macro index S "<enter-command>unset wait_key<enter><shell-escape>~/.mutt/mutt-notmuch-py ~/.mail/temporary/search<enter><change-folder-readonly>~/.mail/temporary/search<enter>" "search mail (using notmuch)"
