@@ -45,3 +45,6 @@ alternative_order text/calendar text/plain text/enriched text/html
 #set smime_ca_location="~/.smime/certificates"
 
 # Notifications
+
+# Not much
+macro index S "<enter-command>unset wait_key<enter><shell-escape>~/.mutt/mutt-notmuch-py ~/.mail/temporary/search<enter><change-folder-readonly>~/.mail/temporary/search<enter>" "search mail (using notmuch)"
