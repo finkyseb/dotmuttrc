@@ -12,6 +12,18 @@ image/tiff; ~/.mutt/view_attachment.sh %s gif
 
 # PDF
 application/pdf; ~/.mutt/view_attachment.sh %s pdf
+application/x-latex; ~/.mutt/view_attachment.sh %s pdf
 
 # Unidentified.
 application/octet-stream; ~/.mutt/view_attachment.sh %s "-" 
+
+# MS Excel
+application/x-msexcel; ~/.mutt/view_attachment.sh %s xls
+application/ms-exc; ~/.mutt/view_attachment.sh %s xls
+application/excel; ~/.mutt/view_attachment.sh %s xls
+application/msexcel; ~/.mutt/view_attachment.sh %s xls
+application/vnd.ms-exc; ~/.mutt/view_attachment.sh %s xls
+application/vnd.ms-excel; ~/.mutt/view_attachment.sh %s xls
+
+# MS Word
+application/msword; ~/.mutt/view_attachment.sh %s doc
