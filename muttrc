@@ -48,3 +48,6 @@ alternative_order text/calendar text/plain text/enriched text/html
 
 # Not much
 macro index S "<enter-command>unset wait_key<enter><shell-escape>~/.mutt/mutt-notmuch-py ~/.mail/temporary/search<enter><change-folder-readonly>~/.mail/temporary/search<enter>" "search mail (using notmuch)"
+
+## Editor 
+set editor = "vim -c 'set spell spelllang=fr'"  # start vim with spell checker on
