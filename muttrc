@@ -51,3 +51,7 @@ macro index S "<enter-command>unset wait_key<enter><shell-escape>~/.mutt/mutt-no
 
 ## Editor 
 set editor = "vim -c 'set spell spelllang=fr'"  # start vim with spell checker on
+
+## HTML mail
+macro compose \e5 "F pandoc -s -f markdown -t html \ny^T^Utext/html; charset=utf-8\n"
+set wait_key=no
