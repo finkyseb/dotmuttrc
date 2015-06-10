@@ -1,5 +1,5 @@
 #!/bin/sh
-# Requires: echo, expr, grep, ldapsearch, sed, test
+# Requires: echo, expr, grep, ldapsearch, sed, test, awk
 # Set your PATH accordingly.
 #
 
