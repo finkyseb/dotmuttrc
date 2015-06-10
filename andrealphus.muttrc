@@ -41,5 +41,12 @@ set ssl_force_tls   = yes
 ## Call for Mac address book
 set query_command = "~/.mutt/andrealphus_query_command.sh '%s'"
 
+## Identities
+alternates "(virgile@gerecke\.fr)|(virgile@404-band\.com)"
+set use_from
+set from="virgile@gerecke.fr"
+macro index \e1 ":set from=virgile@gerecke.fr\n:set status_format=\"-%r-virgile@gerecke.fr: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---\"\n" "Switch to virgile@gerecke.fr"
+macro index \e2 ":set from=virgile@404-band.com\n:set status_format=\"-%r-virgile@404-band.com: %f [Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?]---(%s/%S)-%>-(%P)---\"\n" "Switch to virgile@404-band.com"
+
 ## Aliases
 source ~/.mutt/andrealphus.aliases
