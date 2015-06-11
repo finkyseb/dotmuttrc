@@ -18,10 +18,13 @@ bind pager <Down> next-line
 macro index "xd" "<enter-command>set sort=reverse-last-date-received<enter>" "No thread view, sorting by reverse date"
 macro index "xt" "<enter-command>set sort=threads<enter>" "Thread view, sorting by reverse date"
 
-### Multi malibox configuration
+### Multi mailbox configuration
 ## Personal account.
 #source ~/.mutt/andrealphus.muttrc
 folder-hook 'www.andrealphus.com' 'source ~/.mutt/andrealphus.muttrc'
+
+folder-hook 'gmail.com' 'source ~/.mutt/gmail.muttrc'
+
 #
 ## Work account.
 source ~/.mutt/unistra.muttrc
@@ -29,6 +32,7 @@ folder-hook 'mailserver.u-strasbg.fr' 'source ~/.mutt/unistra.muttrc'
 #
 macro index,pager <F2> '<enter-command>source ~/.mutt/andrealphus.muttrc<enter><change-folder>!<enter>'
 macro index,pager <F3> '<enter-command>source ~/.mutt/unistra.muttrc<enter><change-folder>!<enter>'
+macro index,pager <F4> '<enter-command>source ~/.mutt/gmail.muttrc<enter><change-folder>!<enter>'
 
 macro pager \Cu "|urlview<enter>" "call urlview to open links"
 
