@@ -24,6 +24,7 @@ application/excel; ~/.mutt/view_attachment.sh %s xls
 application/msexcel; ~/.mutt/view_attachment.sh %s xls
 application/vnd.ms-exc; ~/.mutt/view_attachment.sh %s xls
 application/vnd.ms-excel; ~/.mutt/view_attachment.sh %s xls
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; ~/.mutt/view_attachment.sh %s xlsx
 
 # MS Word
 application/msword; ~/.mutt/view_attachment.sh %s doc
