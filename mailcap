@@ -29,3 +29,7 @@ application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; ~/.mutt/view_
 # MS Word
 application/msword; ~/.mutt/view_attachment.sh %s doc
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; ~/.mutt/view_attachment.sh %s doc
+
+# LibreOffice
+application/vnd.oasis.opendocument.spreadsheet; ~/.mutt/view_attachment.sh %s ods
+application/vnd.oasis.opendocument.text; ~/.mutt/view_attachment.sh %s odt
