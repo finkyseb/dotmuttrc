@@ -30,7 +30,7 @@ folder-hook 'mailserver.u-strasbg.fr' 'source ~/.mutt/unistra.muttrc'
 macro index,pager <F2> '<enter-command>source ~/.mutt/andrealphus.muttrc<enter><change-folder>!<enter>'
 macro index,pager <F3> '<enter-command>source ~/.mutt/unistra.muttrc<enter><change-folder>!<enter>'
 
-macro pager \Cu "|urlview<enter>" "call urlview to open links"
+macro pager \Cu "|urlscan<enter>" "call urlview to open links"
 
 source ~/.mutt/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
 
