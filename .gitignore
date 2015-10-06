@@ -1,3 +1,4 @@
 unistra.password.gpg
 *.aliases
 *.swp
+*.pyc

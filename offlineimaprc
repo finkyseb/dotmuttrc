@@ -1,0 +1,39 @@
+# Sample minimal config file.  Copy this to ~/.offlineimaprc and edit to
+# get started fast.
+
+[general]
+accounts = andrealphus, unistra
+#accounts = unistra
+pythonfile = ~/.mutt/offlineimap.py
+
+[Account andrealphus]
+localrepository = andrealphus-local
+remoterepository = andrealphus-remote
+
+[Repository andrealphus-local]
+type = Maildir
+localfolders = ~/.mail/andrealphus
+
+[Repository andrealphus-remote]
+type = IMAP
+remotehost = www.andrealphus.com
+remoteuser = virgile@gerecke.fr
+remotepasseval = subprocess.check_output(["security", "find-generic-password", "-a", "mutt-andrealphus", "-w"]).strip()
+
+[Account unistra]
+localrepository = unistra-local
+remoterepository = unistra-remote
+postsynchook = notmuch new
+
+[Repository unistra-local]
+type = Maildir
+localfolders = ~/.mail/unistra
+
+[Repository unistra-remote]
+type = IMAP
+remotehost = mailserver.u-strasbg.fr
+remoteuser = virgile.gerecke
+remoteport = 993
+ssl = yes 
+sslcacertfile = /usr/local/etc/openssl/osx_cert.pem
+remotepasseval = subprocess.check_output(["security", "find-generic-password", "-a", "virgile.gerecke", "-w"]).strip()

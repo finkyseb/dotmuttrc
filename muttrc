@@ -44,8 +44,27 @@ set index_format        = "[%Z]  %D  %-20.20F  %s"
 auto_view text/html
 alternative_order text/calendar text/plain text/enriched text/html
 
-set smime_keys="~/.smime/keys"
-set smime_certificates="~/.smime/certificates"
-set smime_ca_location="~/.smime/certificates"
+#set smime_keys="~/.smime/keys"
+#set smime_certificates="~/.smime/certificates"
+#set smime_ca_location="~/.smime/certificates"
 
-set editor = "vim -c 'set tw=72' -c 'set wrap'"
+set editor = "vim -c 'set tw=72' -c 'set wrap' -c 'set spell spelllang=fr'"
+
+# Notifications
+
+# Not much
+macro index S "<enter-command>unset wait_key<enter><shell-escape>~/.mutt/mutt-notmuch-py ~/.mail/temporary/search<enter><change-folder-readonly>~/.mail/temporary/search<enter>" "search mail (using notmuch)"
+
+## HTML mail
+macro compose \e5 "F pandoc -s -f markdown -t html \ny^T^Utext/html; charset=utf-8\n"
+set wait_key=no
+
+# Forward attachments
+#set mime_forward=yes
+#set mime_forward_rest=yes 
+
+
+
+#color index red default '~h "X-Spam-Status:.*score=(2|3)\."'
+#color index brightred default '~h "X-Spam-Status:.*score=(4|5)\."'
+#color index magenta default '~h "X-Spam-Status:.*score=(6|7)\."'
