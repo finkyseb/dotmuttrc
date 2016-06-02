@@ -3,10 +3,11 @@
 ## General configuration.
 set my_server       = "mailserver.u-strasbg.fr"
 set my_user         = "s.finkbeiner" 
-set my_pass         = "`security find-generic-password -a s.finkbeiner -w`" 
+#set my_pass         = "`security find-generic-password -a s.finkbeiner -w`" 
+set my_pass         = "`secret-tool lookup client mutt_unistra`" 
 
 ## IMAP configuration.
-set from            = "$my_user@unistra.fr"
+set from            = "Sébastien Finkbeiner <$my_user@unistra.fr>"
 set folder          = "imaps://$my_user@$my_server"
 #set imap_user       = $my_user
 #set imap_pass       = $my_pass
@@ -16,7 +17,7 @@ account-hook mailserver.u-strasbg.fr  "set imap_pass='$my_pass'"
 set spoolfile       = "+INBOX"
 set postponed       = "=INBOX.Brouillons"
 set mbox            = "=INBOX.Archives"
-set record          = "=INBOX.Envoyes"
+set record          = "=INBOX"
 #set trash           = "=INBOX.Corbeille"
 
 # Check all folders.
@@ -40,7 +41,8 @@ set ssl_force_tls   = yes
 source ~/.mutt/smime.rc
 
 # Call LDAP of Unistra
-set query_command = "~/.mutt/unistra_query_command.sh '%s'"
+# set query_command = "~/.mutt/unistra_query_command.sh '%s'"
+set query_command = "~/.mutt/mutt-ldap.pl '%s'"
 
 ## Spam
 macro index     X "s=INBOX/Spam"
