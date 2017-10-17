@@ -1,10 +1,15 @@
 ## General configuration.
 set my_server       = "imap.gmail.com"
-set my_user         = "finkyseb@gmail.com" 
-set my_pass         = "`security find-generic-password -a mutt-gmail -w`" 
+set my_user         = "finkyseb@gmail.com"
+#set my_pass         = "`security find-generic-password -a mutt-gmail -w`"
+set my_pass         = "`secret-tool lookup mutt gmail`"
 set my_smtp_user    = "s.finkbeiner"
 set my_smtp_server  = "mailserver.u-strasbg.fr"
-set my_smtp_pass    = "`security find-generic-password -a s.finkbeiner -w`"
+## Accès Trousseau MacOSX
+#set my_smtp_pass    = "`security find-generic-password -a s.finkbeiner -w`"
+#
+## Accès trousseau Gnome
+set my_stmp_pass    = "`secret-tool lookup client mutt_unistra`"
 
 ## IMAP configuration.
 set from            = "$my_user"
