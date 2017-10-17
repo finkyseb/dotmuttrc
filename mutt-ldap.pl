@@ -18,7 +18,7 @@ use Encode qw/encode decode/;
 use vars qw { $ldapserver $domain $username $password $basedn };
 
 # --- configuration ---
-$ldapserver = "ldap.unistra.fr";
+$ldapserver = "ldaps://ldap.unistra.fr";
 $domain = "";
 $username = "uid=s.finkbeiner,o=uds";
 $password = `secret-tool lookup client mutt_unistra`;
@@ -35,7 +35,7 @@ if (!$search=~/[\.\*\w\s]+/) {
 
 use Net::LDAP;
 
-my $ldap = Net::LDAP->new($ldapserver) or die "$@";
+my $ldap = Net::LDAP->new($ldapserver, sslversion => 'sslv23') or die "$@";
 
 $ldap->bind("$username", password=>$password);
 
