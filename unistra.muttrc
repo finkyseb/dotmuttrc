@@ -48,10 +48,6 @@ set query_command = "~/.mutt/mutt-ldap.pl '%s'"
 macro index     X "s=INBOX/Spam"
 macro pager     X "s=INBOX/Spam"
 
-## Spam
-macro index     X "s=INBOX/Spam"
-macro pager     X "s=INBOX/Spam"
-
 ## Aliases
 source ~/.mutt/unistra.aliases
 
