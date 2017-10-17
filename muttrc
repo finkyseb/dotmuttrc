@@ -3,6 +3,9 @@
 set sort=threads
 set sort_aux=reverse-last-date-received
 
+set edit_headers = yes
+
+
 # Sort folders browser alphabetically.
 set sort_browser=alpha
 
@@ -33,6 +36,9 @@ folder-hook 'mailserver.u-strasbg.fr' 'source ~/.mutt/unistra.muttrc'
 macro index,pager <F2> '<enter-command>source ~/.mutt/andrealphus.muttrc<enter><change-folder>!<enter>'
 macro index,pager <F3> '<enter-command>source ~/.mutt/unistra.muttrc<enter><change-folder>!<enter>'
 macro index,pager <F4> '<enter-command>source ~/.mutt/gmail.muttrc<enter><change-folder>!<enter>'
+macro index,pager <F5> '<enter-command>source ~/.mutt/gmail-pro.muttrc<enter><change-folder>!<enter>'
+macro index,pager <F6> '<enter-command>source ~/.mutt/yahoo.muttrc<enter><change-folder>!<enter>'
+
 
 macro pager \Cu "|urlscan<enter>" "call urlscan to open links"
 
