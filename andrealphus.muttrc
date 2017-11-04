@@ -1,7 +1,7 @@
 ## General configuration.
 set my_server       = "www.andrealphus.com"
 set my_user         = "sebastien@finkbeiner.fr" 
-set my_pass         = "`security find-generic-password -a s.finkbeiner -w`" 
+set my_pass         = "`security find-generic-password -a seb-finkbeiner -w`" 
 set my_smtp_user    = "s.finkbeiner"
 set my_smtp_server  = "mailserver.u-strasbg.fr"
 ## Accès Trousseau MacOSX

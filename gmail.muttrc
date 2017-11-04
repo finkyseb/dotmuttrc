@@ -1,15 +1,11 @@
 ## General configuration.
 set my_server       = "imap.gmail.com"
 set my_user         = "finkyseb@gmail.com"
-#set my_pass         = "`security find-generic-password -a mutt-gmail -w`"
-set my_pass         = "`secret-tool lookup mutt gmail`"
+set my_pass         = "`security find-generic-password -a mutt-gmail -w`"
 set my_smtp_user    = "s.finkbeiner"
 set my_smtp_server  = "mailserver.u-strasbg.fr"
-## Accès Trousseau MacOSX
-#set my_smtp_pass    = "`security find-generic-password -a s.finkbeiner -w`"
-#
-## Accès trousseau Gnome
-set my_stmp_pass    = "`secret-tool lookup client mutt_unistra`"
+
+set my_smtp_pass    = "`security find-generic-password -a s.finkbeiner -w`"
 
 ## IMAP configuration.
 set from            = "$my_user"
@@ -44,12 +40,8 @@ set smtp_url        = "smtps://$my_smtp_user:$my_smtp_pass@$my_smtp_server"
 set ssl_force_tls   = yes
 
 ## Call for Mac address book
-#set query_command = "~/.mutt/andrealphus_query_command.sh '%s'"
+set query_command = "~/.mutt/andrealphus_query_command.sh '%s'"
 
 ## Aliases
 #source ~/.mutt/andrealphus.aliases
 
-## Goobook (Google contacts)
-set query_command = "goobook query '%s'"
-bind editor <Tab> complete-query
-macro index,pager a "<pipe-message>goobook add<return>" "Add contact to Google"
