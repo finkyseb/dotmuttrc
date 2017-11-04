@@ -1,15 +1,9 @@
 ## General configuration.
 set my_server       = "imap.mail.yahoo.com"
 set my_user         = "finkyseb@yahoo.fr" 
-#set my_pass         = "`security find-generic-password -a mutt-gmail -w`" 
-set my_pass         = "`secret-tool lookup mutt yahoo`" 
+set my_pass         = "`security find-generic-password -a mutt-yahoo -w`" 
 set my_smtp_user    = "finkyseb@yahoo.fr"
 set my_smtp_server  = "smtp.mail.yahoo.com"
-## Accès Trousseau MacOSX
-#set my_smtp_pass    = "`security find-generic-password -a s.finkbeiner -w`"
-#
-## Accès trousseau Gnome
-set my_stmp_pass    = "`secret-tool lookup mutt yahoo`"
 
 ## IMAP configuration.
 set from            = "$my_user"
