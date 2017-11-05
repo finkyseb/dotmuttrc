@@ -21,7 +21,7 @@ use vars qw { $ldapserver $domain $username $password $basedn };
 $ldapserver = "ldaps://ldap.unistra.fr";
 $domain = "";
 $username = "uid=s.finkbeiner,o=uds";
-$password = `secret-tool lookup client mutt_unistra`;
+$password = `security find-generic-password -a s.finkbeiner -w`;
 $basedn = "o=uds";
 # --- end configuration ---
 
