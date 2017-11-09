@@ -41,7 +41,7 @@ set ssl_force_tls   = yes
 set ssl_starttls     = yes
 
 ## Call for Mac address book
-set query_command = "~/.mutt/andrealphus_query_command.sh '%s'"
+set query_command = "contacts '%s'"
 
 ## Identities
 set use_from
