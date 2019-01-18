@@ -74,3 +74,8 @@ set wait_key=no
 #color index red default '~h "X-Spam-Status:.*score=(2|3)\."'
 #color index brightred default '~h "X-Spam-Status:.*score=(4|5)\."'
 #color index magenta default '~h "X-Spam-Status:.*score=(6|7)\."'
+#
+#
+# Signature
+send-hook '~t @*unistra.fr' set signature=~/.mutt/unistra.signature
+

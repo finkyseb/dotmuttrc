@@ -51,5 +51,3 @@ macro pager     X "s=INBOX/Spam"
 ## Aliases
 source ~/.mutt/unistra.aliases
 
-## Signature
-set signature="unistra.signature"

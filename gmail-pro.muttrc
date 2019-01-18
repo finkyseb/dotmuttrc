@@ -1,20 +1,15 @@
 ## General configuration.
 set my_server       = "imap.gmail.com"
-set my_user         = "finkyseb@gmail.com"
-#set my_pass         = "`security find-generic-password -a mutt-gmail -w`"
-set my_pass         = "`secret-tool lookup mutt gmail`"
-set my_smtp_user    = "finkyseb@gmail.com"
-set my_smtp_server  = "smtp.gmail.com/"
+set my_user         = "seb.finkbeiner@gmail.com" 
+#set my_pass         = "`security find-generic-password -a mutt-gmail -w`" 
+set my_pass         = "`secret-tool lookup mutt gmail-pro`" 
+set my_smtp_user    = "s.finkbeiner"
+set my_smtp_server  = "mailserver.u-strasbg.fr"
 ## Accès Trousseau MacOSX
 #set my_smtp_pass    = "`security find-generic-password -a s.finkbeiner -w`"
 #
 ## Accès trousseau Gnome
-#
-
-set ssl_starttls=yes
-set ssl_force_tls=yes
-
-set my_stmp_pass    = "`secret-tool lookup mutt gmail`"
+set my_stmp_pass    = "`secret-tool lookup client mutt_unistra`"
 
 ## IMAP configuration.
 set from            = "$my_user"
@@ -23,7 +18,6 @@ set folder          = "imaps://$my_user@$my_server"
 #set imap_pass       = $my_pass
 account-hook gmail.com  "set imap_user='$my_user'"
 account-hook gmail.com  "set imap_pass='$my_pass'"
-account-hook gmail.Com  "set smtp_pass='$my_smtp_pass'"
 
 set spoolfile       = +INBOX
 set postponed       = "+[Gmail]/Brouillons"
@@ -46,8 +40,8 @@ set timeout = 15
 
 ## SMTP configuration.
 set my_name         = "Sébastien FINKBEINER"
-set smtp_url        = "smtps://$my_smtp_user@$my_smtp_server:587/"
-# set ssl_force_tls   = yes
+set smtp_url        = "smtps://$my_smtp_user:$my_smtp_pass@$my_smtp_server"
+set ssl_force_tls   = yes
 
 ## Call for Mac address book
 #set query_command = "~/.mutt/andrealphus_query_command.sh '%s'"
