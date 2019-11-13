@@ -1,6 +1,6 @@
 ## General configuration.
-set my_server       = "mailserver.u-strasbg.fr"
-set my_user         = "s.finkbeiner" 
+set my_server       = "partage.unistra.fr"
+set my_user         = "s.finkbeiner@unistra.fr" 
 set my_pass         = "`security find-generic-password -a s.finkbeiner -w`" 
 
 ## IMAP configuration.
@@ -8,8 +8,8 @@ set from            = "Sébastien Finkbeiner <$my_user@unistra.fr>"
 set folder          = "imaps://$my_user@$my_server"
 #set imap_user       = $my_user
 #set imap_pass       = $my_pass
-account-hook mailserver.u-strasbg.fr  "set imap_user='$my_user'"
-account-hook mailserver.u-strasbg.fr  "set imap_pass='$my_pass'"
+account-hook partage.unistra.fr  "set imap_user='$my_user'"
+account-hook partage.unistra.fr  "set imap_pass='$my_pass'"
 
 set spoolfile       = "+INBOX"
 set postponed       = "=INBOX.Brouillons"
